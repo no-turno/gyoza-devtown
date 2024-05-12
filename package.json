@@ -1,0 +1,55 @@
+{
+  "name": "gyoza-devtown",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@elysiajs/cookie": "^0.8.0",
+    "@elysiajs/cors": "^1.0.2",
+    "@elysiajs/eden": "^1.0.13",
+    "@elysiajs/html": "^1.0.2",
+    "@elysiajs/static": "^1.0.3",
+    "@elysiajs/stream": "^1.0.2",
+    "@swc/core": "^1.5.5",
+    "@swc/types": "^0.1.6",
+    "acorn": "^8.11.3",
+    "elysia": "^1.0.18",
+    "pkg-types": "^1.1.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "rolldown": "^0.10.2",
+    "rollup": "^4.17.2",
+    "tsup": "^8.0.2",
+    "vinxi": "^0.3.11",
+    "vite": "^5.2.11",
+    "webpack": "^5.91.0"
+  },
+  "exports": {
+    "build": {
+      "rolldown": {
+        "default": "./packages/build/rolldown.ts"
+      }
+    },
+    "runtime": {
+      "bun": {
+        "default": "./packages/runtime/bun/extended.ts"
+      }
+    },
+    "define": {
+      "default": "./lib/define/define.ts",
+      "bun": {
+        "default": "./lib/define/bun.ts"
+      },
+      "swc": {
+        "default": "./lib/define/swc.ts"
+      },
+      "tsup": {
+        "default": "./lib/define/tsup.ts"
+      }
+    }
+  }
+}
